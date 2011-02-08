@@ -58,7 +58,7 @@ module ActsAsSanitiled #:nodoc: all
               string = Sanitize.clean(string, sanitize_options) unless skip_sanitize
               textiled[attribute.to_s] = string
             end
-            textiled[attribute.to_s]
+            textiled[attribute.to_s].html_safe
           elsif type.nil? && self[attribute].nil?
             nil
           elsif type_options.include?(type.to_s)
@@ -68,7 +68,7 @@ module ActsAsSanitiled #:nodoc: all
           end
         end
 
-        define_method("#{attribute}_plain",  proc { strip_html(__send__(attribute)) if __send__(attribute) } )
+        define_method("#{attribute}_plain",  proc { strip_html(__send__(attribute)).html_safe if __send__(attribute) } )
         define_method("#{attribute}_source", proc { __send__("#{attribute}_before_type_cast") } )
 
         @textiled_attributes << attribute
