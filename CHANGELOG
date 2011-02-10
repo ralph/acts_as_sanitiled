@@ -1,3 +1,7 @@
+* Remove explicit Nokogiri dependency
+* Update requirement to allow Sanitize 2.0--the future is now
+* Update requirement to allow a wider range of RedCloth
+
 1.1.2 (2010-05-07)
 * Make reload method more compatible (eg. with globalize2)
 
