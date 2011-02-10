@@ -37,7 +37,7 @@ EOF
     @desc_html    = '_why announces <i>Sandbox</i>'
     @desc_plain   = '_why announces Sandbox'
 
-    @body_html    = "<p>First line<br />\nSecond line with <strong>bold</strong></p>\n<p>Second paragraph with special char\342\204\242, <a>XSS attribute</a>,<br />\nscript&gt;script tag, and <b>unclosed tag.</b></p>"
+    @body_html    = "<p>First line<br>\nSecond line with <strong>bold</strong></p>\n<p>Second paragraph with special char\342\204\242, <a>XSS attribute</a>,<br>\nscript&gt;script tag, and <b>unclosed tag.</b></p>"
     @body_plain   = "First line\nSecond line with bold\n\nSecond paragraph with special char™, XSS attribute,\nscript>script tag, and unclosed tag."
   end
 
