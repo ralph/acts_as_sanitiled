@@ -49,7 +49,7 @@ EOF
   it "should mark textilized and sanitized output as html safe" do
     @story.description.should.be :html_safe?
     @story.body.should.be :html_safe?
-  end
+  end if ActsAsSanitiled.html_safe_available?
 
   it "should properly strip html when given the 'plain' option" do
     @story.description(:plain).should.equal @desc_plain
@@ -59,7 +59,7 @@ EOF
   it "should mark output stripped of html as html safe" do
     @story.description(:plain).should.be :html_safe?
     @story.body(:plain).should.be :html_safe?
-  end
+  end if ActsAsSanitiled.html_safe_available?
 
   it "should leave unchanged when given the 'source' option" do
     @story.description(:source).should.equal @desc_textile
@@ -69,7 +69,7 @@ EOF
   it "should not mark raw source as html safe" do
     @story.description(:source).should.not.be :html_safe?
     @story.body(:source).should.not.be :html_safe?
-  end
+  end if ActsAsSanitiled.html_safe_available?
 
   it "should raise when given a non-sensical option" do
     proc{ @story.description(:cassadaga) }.should.raise
