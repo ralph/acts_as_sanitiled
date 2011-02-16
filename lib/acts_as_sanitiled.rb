@@ -1,6 +1,6 @@
 require 'rubygems'
 require 'sanitize'
-require 'redcloth'
+require 'RedCloth'
 require 'active_support'
 
 module ActsAsSanitiled #:nodoc: all
