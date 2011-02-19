@@ -1,3 +1,6 @@
+1.1.5 (2011-02-16)
+* Support for Rails 3 / rails_xss via the addition of html_safe to the output if applicable
+
 1.1.4 (2011-02-16)
 * RedCloth 4.2.7 is released and doesn't have the case-sensitivity issue, so remove the restriction for 4.2.6
 
