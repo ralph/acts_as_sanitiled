@@ -115,7 +115,7 @@ module ActsAsSanitiled #:nodoc: all
 
   private
     def strip_html(html)
-      html.gsub!(%r{</p>\n<p>}, "</p>\n\n<p>") # Workaround RedCloth 4.2.x issue
+      html = html.gsub(%r{</p>\n<p>}, "</p>\n\n<p>") # Workaround RedCloth 4.2.x issue
       Nokogiri::HTML::DocumentFragment.parse(html).inner_text
     end
   end
