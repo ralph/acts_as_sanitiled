@@ -1,7 +1,12 @@
-require 'rubygems'
 require 'sanitize'
 require 'RedCloth'
-require 'active_support'
+require 'rails'
+
+if Rails::VERSION::MAJOR <= 2
+  require 'active_support'
+else
+  require 'active_support/core_ext/module/attribute_accessors'
+end
 
 module ActsAsSanitiled #:nodoc: all
   mattr_accessor :default_redcloth_options
