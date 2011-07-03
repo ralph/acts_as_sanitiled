@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{acts_as_sanitiled}
-  s.version = "1.1.5"
+  s.version = "1.1.6"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Gabe da Silveira"]
-  s.date = %q{2011-02-16}
+  s.date = %q{2011-07-03}
   s.description = %q{A modernized version of Chris Wansthrath's venerable acts_as_textiled. It automatically textiles and then sanitizes columns to your specification.  Ryan Grove's excellent Sanitize gem with nokogiri provides the backend for speedy and robust filtering of your output in order to: restrict Textile to a subset of HTML, guarantee well-formedness, and of course prevent XSS.}
   s.email = %q{gabe@websaviour.com}
   s.extra_rdoc_files = [
@@ -30,29 +30,25 @@ Gem::Specification.new do |s|
   ]
   s.homepage = %q{http://github.com/dasil003/acts_as_sanitiled}
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.4.2}
+  s.rubygems_version = %q{1.7.2}
   s.summary = %q{Automatically textiles and/or sanitizes ActiveRecord columns}
-  s.test_files = [
-    "spec/sanitiled_spec.rb",
-    "spec/spec_helper.rb"
-  ]
 
   if s.respond_to? :specification_version then
     s.specification_version = 3
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
-      s.add_runtime_dependency(%q<sanitize>, [">= 1.1.0", "< 3.0.0"])
+      s.add_runtime_dependency(%q<sanitize>, ["< 3.0.0", ">= 1.1.0"])
       s.add_runtime_dependency(%q<RedCloth>, [">= 4.1.0"])
       s.add_development_dependency(%q<bacon>, [">= 0"])
       s.add_development_dependency(%q<activesupport>, [">= 0"])
     else
-      s.add_dependency(%q<sanitize>, [">= 1.1.0", "< 3.0.0"])
+      s.add_dependency(%q<sanitize>, ["< 3.0.0", ">= 1.1.0"])
       s.add_dependency(%q<RedCloth>, [">= 4.1.0"])
       s.add_dependency(%q<bacon>, [">= 0"])
       s.add_dependency(%q<activesupport>, [">= 0"])
     end
   else
-    s.add_dependency(%q<sanitize>, [">= 1.1.0", "< 3.0.0"])
+    s.add_dependency(%q<sanitize>, ["< 3.0.0", ">= 1.1.0"])
     s.add_dependency(%q<RedCloth>, [">= 4.1.0"])
     s.add_dependency(%q<bacon>, [">= 0"])
     s.add_dependency(%q<activesupport>, [">= 0"])
