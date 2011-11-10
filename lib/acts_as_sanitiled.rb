@@ -1,10 +1,10 @@
 require 'sanitize'
 require 'RedCloth'
-require 'rails'
 
 if Rails::VERSION::MAJOR <= 2
   require 'active_support'
 else
+  require 'rails'
   require 'active_support/core_ext/module/attribute_accessors'
 end
 
